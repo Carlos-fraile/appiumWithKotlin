@@ -4,20 +4,11 @@ import io.appium.java_client.AppiumDriver
 import io.appium.java_client.MobileElement
 import io.appium.java_client.android.AndroidDriver
 import io.appium.java_client.remote.MobileCapabilityType
-import junit.framework.TestResult
-import org.junit.jupiter.api.AfterEach
-import org.junit.jupiter.api.TestInfo
 import org.junit.jupiter.api.TestInstance
-import org.openqa.selenium.OutputType
-import org.openqa.selenium.TakesScreenshot
 import org.openqa.selenium.remote.DesiredCapabilities
 import utils.PropertyLoader
 import java.io.File
 import java.net.URL
-import java.nio.file.Files
-import java.nio.file.Paths
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 
@@ -73,21 +64,5 @@ open class baseAppium {
         println("Driver(BaseAppium): " + driver)
 
         return driver
-    }
-
-    @AfterEach
-    fun tearDown(info: TestInfo, result: TestResult) {
-        if (!result.wasSuccessful()) {
-            // Take a screenshot and save it to a file
-            val screenshot = (driver as TakesScreenshot).getScreenshotAs(OutputType.BYTES)
-            val now = LocalDateTime.now()
-            val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss")
-            val fileName =
-                "${info.testClass.get().simpleName}_${info.testMethod.get().name}_${now.format(formatter)}.png"
-            Files.write(Paths.get(fileName), screenshot)
-
-            // Add the screenshot to the test report
-            //Screenshots.screenshot(fileName)
-        }
     }
 }

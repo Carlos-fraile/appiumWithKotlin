@@ -2,3 +2,13 @@ Test-reports/
 target1/
 target/
 /target/
+/rerun/
+/target/maven-status/
+/target/surefire-reports/
+/target/test-classes/
+build/
+.idea/
+*.iml
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
