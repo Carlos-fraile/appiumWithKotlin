@@ -8,7 +8,7 @@ open class clockElements() : MobilePageObject() {
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     // HOME SCREEN
     /////////////////////////////////////////////////////////////////////////////////////////////////////
-    @AndroidFindBy(id = "com.google.android.deskclock:id/fab")
+    @AndroidFindBy(id = "com.google.android.deskclock:id/fabs")
     var HOME_SCREEN_WORLD_BUTTON: MobileElement? = null
 
     @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.TextView[1]")
