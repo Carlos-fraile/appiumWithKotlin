@@ -8,7 +8,7 @@ import org.junit.runner.RunWith
     //tags = "@confluedentApp or @clockApp",
     //tags = "@searchCity",
     glue = ["stepsDefinitions", "stepsDefinitions/confluedentStepsDefs", "stepsDefinitions/clockStepsDefs", "hooks"],
-    plugin = ["com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "rerun:rerun/failed_scenarios.txt"],
+    plugin = ["com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "rerun:rerun/failed_scenarios.txt", "json:target1/cucumber-report/cucumber.json"],
 )
 
 class runCukeTest {
