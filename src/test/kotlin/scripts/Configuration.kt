@@ -9,7 +9,7 @@ class Configuration {
     // FILES
     ///////////////////////////////////////////////////////////////////////////////
     val PROPERTIES_FILE_PATH =
-        "C:/Users/carlos.frailemarquez/Desktop/appiumKotlin/src/test/resources/properties/keys/"
+        "src/test/resources/properties/keys/"
     val KEY_PROPERTIES_FILE_PATH = PROPERTIES_FILE_PATH + "keys%s.properties"
     val USER_INFO_PROPERTIES_FILE_PATH = PROPERTIES_FILE_PATH + "userInfo%s.properties"
 
